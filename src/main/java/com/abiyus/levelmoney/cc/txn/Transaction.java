@@ -2,6 +2,8 @@ package com.abiyus.levelmoney.cc.txn;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.math.BigDecimal;
+
 /**
  * Created by afetene on 12/22/16.
  */
@@ -10,7 +12,7 @@ public class Transaction {
   @JsonProperty("transaction-id")
   private String transactionId;
   @JsonProperty("amount")
-  private double amount;
+  private BigDecimal amount;
   @JsonProperty("clear-date")
   private long clearDate;
   @JsonProperty("categorization")
@@ -27,6 +29,10 @@ public class Transaction {
   private String rawMerchant;
   @JsonProperty("aggregation-time")
   private long aggregationTime;
+  @JsonProperty("payee-name-only-for-testing")
+  String payeeNameOnlyForTesting;
+  @JsonProperty("memo-only-for-testing")
+  String memoOnlyForTesting;
 
   public String getTransactionId() {
     return transactionId;
@@ -36,13 +42,9 @@ public class Transaction {
     this.transactionId = transactionId;
   }
 
-  public double getAmount() {
-    return amount;
-  }
+  public BigDecimal getAmount() { return amount; }
 
-  public void setAmount(double amount) {
-    this.amount = amount;
-  }
+  public void setAmount(BigDecimal amount) { this.amount = amount; }
 
   public long getClearDate() {
     return clearDate;
@@ -106,5 +108,17 @@ public class Transaction {
 
   public void setAggregationTime(long aggregationTime) {
     this.aggregationTime = aggregationTime;
+  }
+
+  public String getPayeeNameOnlyForTesting() {
+    return payeeNameOnlyForTesting;
+  }
+
+  public void setPayeeNameOnlyForTesting(String payeeNameOnlyForTesting) {this.payeeNameOnlyForTesting = payeeNameOnlyForTesting; }
+
+  public String getMemoOnlyForTesting() { return memoOnlyForTesting; }
+
+  public void setMemoOnlyForTesting(String memoOnlyForTesting) {
+    this.memoOnlyForTesting = memoOnlyForTesting;
   }
 }
