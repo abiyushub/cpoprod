@@ -15,8 +15,8 @@ import java.text.NumberFormat;
  */
 public class App {
   public static void main(String[] args) throws IOException{
-
     TransactionManager txnManager = TransactionManager.getInstance();
+    txnManager.setArguments(args);
     JSONObject jsonObject = txnManager.getAllTransactions();
     System.out.println("Transaction Summary: " + jsonObject.toString(4));
   }
