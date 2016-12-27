@@ -8,7 +8,7 @@
 
     Steps:
         1. Download the project or Clone the project from GitHub
-            git clone "https://github.com/abiuyshub/levelmoney"
+            git clone "https://github.com/abiyushub/levelmoney.git"
         2. Go to Dircetory "levelmoney" from command line or  Linux Terminal
         3. Build the project by executing "mvn package" (i.e. please make sure that maven is installed on your machine),
            this will produce assembled zipped files that contains a *.jar file with every dependency needed to run the project
