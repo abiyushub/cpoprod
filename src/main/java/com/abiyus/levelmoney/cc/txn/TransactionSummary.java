@@ -11,6 +11,10 @@ public class TransactionSummary {
   private BigDecimal income;
   private String transactionTitle;
 
+  public TransactionSummary() {
+    this.spent = new BigDecimal(0.0);
+    this.income = new BigDecimal(0.0);
+  }
 
   public void setTransactionTitle(String transactionTitle) {
     this.transactionTitle = transactionTitle;
